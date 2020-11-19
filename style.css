@@ -1,23 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
-@media (max-width: 375px) {
-  body {
-    background-image: url(./images/bg-mobile.svg);
-  }
-}
-
 * {
-  margin: 0;
-  padding: 0;
   font-size: 16px;
   color: #ffffff;
 }
 
-header {
-}
-
 body {
+  margin: 0;
+  padding: 0;
   background-image: url(./images/bg-desktop.svg);
   background-color: #674baf;
   background-position: center;
@@ -25,23 +16,47 @@ body {
   background-size: cover;
 }
 
+header {
+  margin: 5%;
+}
+
+header > div > img {
+  height: 40px;
+}
+
 .wrapper {
+  box-sizing: border-box;
   margin: 5%;
   display: flex;
   width: fit-content;
+  gap: 5%;
+  align-items: center;
 }
 
-.wrapper {
+.wrapper > div {
   flex-basis: 50%;
-}
-
-#heading {
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
 }
 
-#heading > p:last-of-type {
+#mockup > img {
+  width: 100%;
+}
+
+#intro {
+  font-family: "Poppins", sans-serif;
+}
+
+#intro > div {
+  margin-bottom: 40px;
+}
+
+#intro > div > strong {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 5%;
+}
+
+#intro > div > p {
   font-weight: 400;
 }
 
@@ -52,11 +67,72 @@ body {
   width: fit-content;
   background-color: #ffffff;
   border-radius: 30px;
-  padding: 10px 50px 10px 50px;
+  padding: 15px 50px;
   text-align: center;
+  transition: ease-in-out 200ms;
+  text-decoration: none;
 }
 
 .button:hover {
   background-color: #e882e8;
   color: #fff;
+}
+
+.wrapper-icons {
+  box-sizing: border-box;
+  margin: 0 5%;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.wrapper-icons > div {
+  flex-basis: 30px;
+}
+
+.ionicon {
+  fill: #fff;
+  transition: ease-in-out 200ms;
+}
+
+.ionicon:hover {
+  fill: #e882e8;
+}
+
+/* footer {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  margin: 0 auto;
+} */
+
+@media (max-width: 1024px) {
+  body {
+    background-image: url(./images/bg-mobile.svg);
+    background-position: top;
+    background-size: auto;
+  }
+
+  .wrapper {
+    flex-flow: column;
+    gap: 0;
+  }
+
+  .wrapper > div {
+    margin-bottom: 30px;
+  }
+
+  #intro {
+    text-align: center;
+  }
+
+  #intro > div > strong {
+    font-size: 1.5em;
+  }
+
+  .wrapper-icons {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
